@@ -2,7 +2,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install vim wget curl git
+apt-get install vim wget curl git rake
 
 echo install chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -18,3 +18,8 @@ wget --quiet --output-document=temp "https://github.com/KELiON/cerebro/releases/
 
 echo chromebook fixes and tweaks
 curl -LOk https://github.com/fascinatingcaptain/CBFixesAndTweaks/archive/master.tar.gz; tar -zxvf master.tar.gz; cd CBFixesAndTweaks-master; sudo -E bash CBFixesAndTweaks.sh
+
+echo installing dotfiles
+git clone https://github.com/collingridge/dotfiles
+cd ~/.dotfiles
+rake install
