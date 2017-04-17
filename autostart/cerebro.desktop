@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=cerebro
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[C]=cerebro
+Name=cerebro
+Comment[C]=
+Comment=

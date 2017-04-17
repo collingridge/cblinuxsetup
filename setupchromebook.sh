@@ -2,8 +2,11 @@
 #!/bin/bash
 
 apt-get update
-apt-get install vim wget curl git rake
+apt-get install vim wget curl git rake software-properties-common
 
+add-apt-repository ppa:nathan-renniewaldock/flux
+apt-get update
+apt-get install fluxgui
 
 echo install chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -26,4 +29,5 @@ popd
 echo chromebook fixes and tweaks
 curl -LOk https://github.com/fascinatingcaptain/CBFixesAndTweaks/archive/master.tar.gz; tar -zxvf master.tar.gz; cd CBFixesAndTweaks-master; sudo -E bash CBFixesAndTweaks.sh
 
+cp autostart/* ~/.config/autostart
 
