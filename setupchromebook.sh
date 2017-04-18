@@ -2,7 +2,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install vim wget curl git rake software-properties-common
+apt-get install vim wget curl git rake software-properties-common bash-completion vlc ubuntu-restricted-extras ttf-ubuntu-font-family software-center synaptic terminator
 
 add-apt-repository ppa:nathan-renniewaldock/flux
 apt-get update
